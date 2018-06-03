@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+{% include "part/head.html" %}
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  {% include "part/header.html" %}
+  {% block body %} {% endblock %}
+  {% include "part/footer.html" %}
+</div>
+{% include "part/scripts.html" %}
+</body>
+</html>

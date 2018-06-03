@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{% include "part/head.html" %}
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+
+  {% include "part/header.html" %}
+  <!-- Full Width Column -->
+  {% block body %}
+  
+  {% endblock body %}  
+  <!-- /.content-wrapper -->
+  {% include "part/footer.html" %}
+</div>
+<!-- ./wrapper -->
+
+{% include "part/scripts.html" %}
+</body>
+</html>

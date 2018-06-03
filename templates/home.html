@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="content-wrapper">
+    <div class="container">
+        <section class="content">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Upload Gambar</h3>
+                    </div>
+                    <form role="form" method="POST" enctype="multipart/form-data" action="/">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="exampleInputFile">Pilih File</label>
+                                <input type="file" id="exampleInputFile" type=file name=file accept="image/png, image/jpeg, image/bmp">
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary btn-block">Upload</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">   
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Buka Webcam</h3>
+                    </div>
+                    <div class="box-body" style="margin-bottom: 0px" align="center">
+                        <p style="padding-top:12px;padding-bottom:0px">Buka melalui webcam untuk mendeteksi pola dari kalung sapi.</p>
+                        <br>
+                    </div>
+                    <div class="box-footer">
+                        <a href="/webcam"><button class="btn btn-primary btn-block">Buka</button></a>
+                    </div>
+                </div>
+            </div>
+            {% if state==1 %}
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Hasil</h3>
+                </div>
+                <div class="box-body with-border">
+                    <div align="center">
+                        <img style="height: 700px" src="img/{{ filename }}" alt="gambar aku ga ada ya :(">
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.container -->
+</div>
+{% endblock %}
